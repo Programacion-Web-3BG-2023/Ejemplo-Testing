@@ -19,6 +19,9 @@
         <b>Persona insertada correctamente</b>
     @endisset
 
+    @isset($eliminado)
+    <b>Persona eliminada correctamente</b>
+    @endisset
     <table>
         <tr>
             <td>ID</td>
@@ -45,6 +48,8 @@
                 <td>
                     {{ $persona -> updated_at }}
                 </td>
+                
+                <td> <a href="/eliminarPersona?id={{ $persona -> id}}"> Eliminar</a> </td>
 
             </tr>
         @endforeach

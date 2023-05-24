@@ -26,5 +26,16 @@ class PersonaController extends Controller
             "personas" => Persona::all()
         ]);
     }
+
+    public function EliminarPersona(Request $request){
+        $persona = Persona::find($request -> get("id"));
+        $persona -> delete();
+
+        return view("personas", [
+            "personas" => Persona::all(),
+            "eliminado" => true
+        ]);
+
+    }
 }
 
