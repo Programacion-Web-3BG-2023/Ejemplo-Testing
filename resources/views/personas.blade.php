@@ -49,7 +49,9 @@
                     {{ $persona -> updated_at }}
                 </td>
                 
-                <td> <a href="/eliminarPersona?id={{ $persona -> id}}"> Eliminar</a> </td>
+                <td> 
+                    <a href="/eliminarPersona/{{$persona -> id}}"> Eliminar</a> 
+                </td>
 
             </tr>
         @endforeach

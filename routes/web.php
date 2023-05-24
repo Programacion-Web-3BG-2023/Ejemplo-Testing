@@ -23,4 +23,4 @@ Route::get("/personas", [PersonaController::class,"ListarPersonas"]);
 
 Route::post("/personas", [PersonaController::class,"InsertarPersona"]);
 
-Route::get("/eliminarPersona",[PersonaController::class,"EliminarPersona"]);
+Route::get("/eliminarPersona/{d}",[PersonaController::class,"EliminarPersona"]);

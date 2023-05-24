@@ -27,8 +27,8 @@ class PersonaController extends Controller
         ]);
     }
 
-    public function EliminarPersona(Request $request){
-        $persona = Persona::find($request -> get("id"));
+    public function EliminarPersona(Request $request, $idPersona){
+        $persona = Persona::find($idPersona);
         $persona -> delete();
 
         return view("personas", [
